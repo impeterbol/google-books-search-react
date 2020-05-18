@@ -51,16 +51,19 @@ fetchBooks();
 
   return (
     //ading form for searching the google books API.
+    //onSubmit should be in the form not in the input field
     <section>
-      <form>
+      <form onSubmit={onSubmitHandler}>
         <label>
           <span> Search for books from Google Books</span>
           <input
           type ="search"
           placeholder = "type something!"
           value = {searchTerm}
+          
+          
           onChange ={onInputChange}
-          onSubmit={onSubmitHandler}
+         
           />
           <button type ="submit"> Search! </button>
         </label>
