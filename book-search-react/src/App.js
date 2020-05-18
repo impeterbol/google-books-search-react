@@ -68,6 +68,34 @@ fetchBooks();
           <button type ="submit"> Search! </button>
         </label>
       </form>
+
+    <ul>
+          {
+
+            books.items.map((book, i)=>{
+              return(
+                <li key ={i}>
+                <div>
+                <img alt ={book.volumeInfo.title} src={book.volumeInfo.imageLinks.thumbnail}/>
+                  <div>
+
+                  <h3>{book.volumeInfo.title}</h3> 
+                <p>{book.volumeInfo.publishedDate}</p>
+                  </div>
+               
+                  
+                  </div>
+                <hr/>
+                </li>
+              )
+            })
+
+
+          }
+
+    </ul>
+
+
     </section>
   );
 }
